@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">MobProg-TP2</string>
+    <string name="title_home">Home</string>
+    <string name="title_form">Form</string>
+    <string name="title_maps">Map</string>
+
+
+    <string name="hint_nama">Nama</string>
+    <string name="hint_hobby">Hobby</string>
+    <string name="button_save">Simpan</string>
+    <string name="action_save">Simpan</string>
+    <string name="action_name_message">"Selamat Datang! "</string>
+    <string name="action_hobby_message">"Hobby: "</string>
+
+    <string name="invalid_name">Not a valid name</string>
+    <string name="invalid_hobby">Not a valid hobby</string>
+
+
+    <!-- Placeholder, Unused-->
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>
