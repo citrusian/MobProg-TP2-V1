@@ -17,17 +17,17 @@ import android.widget.Toast
 import com.example.mobprog_tp2.databinding.FragmentFormBinding
 
 import com.example.mobprog_tp2.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class FormFragment : Fragment() {
 
     private var _binding: FragmentFormBinding? = null
     private val binding get() = _binding!!
 
-    // validation in here
+    // Using Login Preset for validation
     private lateinit var loginViewModel: LoginViewModel
 
     // Output Message (Local Session)
-    // !! note IntelliJ IDE keeps outputting warning if using Uppercase even when user-warning === suppressed
     private lateinit var nameOutput: TextView
     private lateinit var hobbyOutput: TextView
     private lateinit var namaAllPageOutput: TextView
@@ -115,7 +115,6 @@ class FormFragment : Fragment() {
         }
 
         loginButton.setOnClickListener {
-//            loadingProgressBar.visibility = View.VISIBLE
             loginViewModel.login(
                 nameEditText.text.toString(),
                 hobbyEditText.text.toString()
@@ -128,14 +127,14 @@ class FormFragment : Fragment() {
         val nameOutputStr = getString(R.string.action_name_message) + "\n" + name
         val hobbyOutputStr = getString(R.string.action_hobby_message) + "\n" + hobby
 
-        // Text string and visibility
+        // Name and Hobby Visibility
         nameOutput.text = nameOutputStr
         nameOutput.visibility = View.VISIBLE
 
         hobbyOutput.text = hobbyOutputStr
         hobbyOutput.visibility = View.VISIBLE
 
-        // Text at all page
+        // Name String on all page Visibility
         namaAllPageOutput.text = name
         namaAllPageOutput.visibility = View.VISIBLE
 
@@ -146,15 +145,23 @@ class FormFragment : Fragment() {
         val appContext = context?.applicationContext ?: return
         val toast = Toast.makeText(appContext, nameOutputStr, Toast.LENGTH_LONG)
         val xOffset = 0 // Horizontal offset
-        val yOffset = 200 // Vertical offset
+        val yOffset = getBottomNavHeight()  // Get Vertical offset from BottomNav
+        // Note : Doesn't work on smaller screen
         toast.setGravity(Gravity.BOTTOM, xOffset, yOffset)
         toast.show()
+    }
+
+    private fun getBottomNavHeight(): Int {
+        val bottomNav = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+        return bottomNav.height
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
         val appContext = context?.applicationContext ?: return
         val toast = Toast.makeText(appContext, errorString, Toast.LENGTH_LONG)
-        toast.setGravity(Gravity.BOTTOM, 0, 200)
+        val xOffset = 0 // Horizontal offset
+        val yOffset = getBottomNavHeight()
+        toast.setGravity(Gravity.BOTTOM, xOffset, yOffset)
         toast.show()
     }
 
