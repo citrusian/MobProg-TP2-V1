@@ -72,6 +72,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
 
 
         // Init map container
+        // Resource Heavy, Can cause BSOD on some emulator system
         mapContainer = view.findViewById(R.id.mapContainer)
         val mapFragment = childFragmentManager.findFragmentByTag("mapFragment") as? SupportMapFragment
             ?: SupportMapFragment.newInstance().also {
