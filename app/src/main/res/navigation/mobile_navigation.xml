@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_form"
-        android:name="com.example.mobprog_tp2.ui.login.FormFragment"
+        android:name="com.example.mobprog_tp2.ui.Form.FormFragment"
         android:label="@string/title_form"
         tools:layout="@layout/fragment_form" />
     <fragment

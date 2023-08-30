@@ -3,17 +3,22 @@
     <string name="title_home">Home</string>
     <string name="title_form">Form</string>
     <string name="title_maps">Map</string>
+    <string name="splash">splash</string>
+    <string name="splash_text">Selamat Datang !</string>
 
 
     <string name="hint_nama">Nama</string>
     <string name="hint_hobby">Hobby</string>
     <string name="button_save">Simpan</string>
     <string name="action_save">Simpan</string>
-    <string name="action_name_message">"Selamat Datang! "</string>
-    <string name="action_hobby_message">"Hobby: "</string>
+    <string name="action_name_message">"Selamat Datang!"</string>
+    <string name="action_hobby_message">"Hobby:"</string>
 
     <string name="invalid_name">Not a valid name</string>
     <string name="invalid_hobby">Not a valid hobby</string>
+
+    <string name="Warn_map_permission">"Permission Denied"</string>
+    <string name="Warn_map_permission2">"Enable permission to use Maps"</string>
 
 
     <!-- Placeholder, Unused-->

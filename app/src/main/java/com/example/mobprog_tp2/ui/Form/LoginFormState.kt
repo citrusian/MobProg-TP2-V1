@@ -1,4 +1,4 @@
-package com.example.mobprog_tp2.ui.login
+package com.example.mobprog_tp2.ui.Form
 
 /**
  * Data validation state of the login form.

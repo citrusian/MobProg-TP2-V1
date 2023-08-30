@@ -1,4 +1,4 @@
-package com.example.mobprog_tp2.ui.login
+package com.example.mobprog_tp2.ui.Form
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -1,4 +1,4 @@
-package com.example.mobprog_tp2.ui.login
+package com.example.mobprog_tp2.ui.Form
 
 /**
  * User details post authentication that is exposed to the UI

@@ -1,4 +1,4 @@
-package com.example.mobprog_tp2.ui.login
+package com.example.mobprog_tp2.ui.Form
 
 /**
  * Authentication result : success (user details) or error message.
